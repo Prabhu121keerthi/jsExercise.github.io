@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const arr = [1,4,3,2,5,7];
+    var index = 3;
+
+    function find(arr,index) {
+
+      let num = arr[index];
+      let indx = 0;
+      
+      let array = arr.sort(function(a, b){return a - b});
+
+      document.write("Array after sorting:", array);
+
+      for(let i = 0; i < array.length ; i++) {
+
+        if(array[i] > num) {
+
+          indx = i;
+          break;
+
+        }
+      }
+      return indx;
+    }
+
+    var val = find(arr,index) 
+    document.write("<br><br>Nearest larger index is " + val);
+
+  
+  </script>  
+</body>
+</html>
